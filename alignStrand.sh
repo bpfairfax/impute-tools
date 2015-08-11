@@ -11,7 +11,7 @@ OUT_PREFIX=
 ## use shapeit to check strand alignment
 for chr in $(seq 1 22)
 do 
-	shapeit -check -P chr${chr}.unphased --input-ref $REF_DIR/$REF_PREFIX$chr$REF_SUFFIX.hap.gz $REF_DIR/$REF_PREFIX$chr$REF_SUFFIX.legend.gz  $REF_DIR/$REF_PREFIX.sample --output-log $OUT_PREFIXchr${chr}.alignments
+	shapeit -check -P chr${chr}.unphased --input-ref $REF_DIR/$REF_PREFIX$chr$REF_SUFFIX.hap.gz $REF_DIR/$REF_PREFIX$chr$REF_SUFFIX.legend.gz  $REF_DIR/$REF_PREFIX2.sample --output-log $OUT_PREFIXchr${chr}.alignments
 done
 
 ## create lists of SNPs to flip and exclude
