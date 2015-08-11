@@ -6,12 +6,12 @@ REF_DIR=/well/jknight/reference/1kg/ALL_1000G_phase1integrated_v3_impute
 REF_PREFIX=ALL_1000G_phase1integrated_v3_chr
 REF_PREFIX2=ALL_1000G_phase1integrated_v3
 REF_SUFFIX=_impute
-OUT_PREFIX=myIpiData.chr
+OUT_PREFIX=
 
 ## use shapeit to check strand alignment
 for chr in $(seq 1 22)
 do 
-	shapeit -check -P chr${chr}.unphased --input-ref $REF_DIR/$REF_PREFIX$chr$REF_SUFFIX.hap.gz $REF_DIR/$REF_PREFIX$chr$REF_SUFFIX.legend.gz  $REF_DIR/$REF_PREFIX2.sample --output-log $OUT_PREFIXchr${chr}.alignments
+	shapeit -check -P chr${chr}.unphased --input-ref $REF_DIR/$REF_PREFIX$chr$REF_SUFFIX.hap.gz $REF_DIR/$REF_PREFIX$chr$REF_SUFFIX.legend.gz  $REF_DIR/$REF_PREFIX2.sample --output-log $OUT_PREFIX$chr${chr}.alignments
 done
 
 ## create lists of SNPs to flip and exclude
