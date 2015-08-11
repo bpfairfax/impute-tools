@@ -6,7 +6,7 @@ REF_DIR=/well/jknight/reference/1kg/ALL_1000G_phase1integrated_v3_impute
 REF_PREFIX=ALL_1000G_phase1integrated_v3_chr
 REF_PREFIX2=ALL_1000G_phase1integrated_v3
 REF_SUFFIX=_impute
-OUT_PREFIX=
+OUT_PREFIX=myIpiData.chr
 
 ## use shapeit to check strand alignment
 for chr in $(seq 1 22)
